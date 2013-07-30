@@ -13,6 +13,7 @@ set :use_sudo,    false
 role :app, 'num3.ch'
 role :web, 'num3.ch'
 
+
 set :ssh_options, { :forward_agent => true }
 
 # if you want to clean up old releases on each deploy uncomment this:
@@ -30,9 +31,24 @@ set :ssh_options, { :forward_agent => true }
 #   end
 # end
 
-set :use_composer, true
+namespace :myproject do
+
+    task :vendors do
+        run "curl -s http://getcomposer.org/installer | php -- --install-dir=#{release_path}"
+        run "cd #{release_path} && #{release_path}/composer.phar install"
+    end
+
+    # task :shared_symlinks do
+    #     run "ln -s #{shared_path}/resources/config/prod.php #{current_path}/resources/config/prod.php"
+    # end
+end
+
+
 
 set  :keep_releases,  3
+
+after "deploy:update_code", "myproject:vendors"
+# after "deploy:create_symlink", "myproject:shared_symlinks"
 
 # Be more verbose by uncommenting the following line
 # logger.level = Logger::MAX_LEVEL
