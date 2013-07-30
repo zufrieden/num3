@@ -10,6 +10,9 @@ set :user,        "mfh"
 set :domain,      "antistatique"
 set :use_sudo,    false
 
+role :app, 'num3.ch'
+role :web, 'num3.ch'
+
 set :ssh_options, { :forward_agent => true }
 
 # if you want to clean up old releases on each deploy uncomment this:
