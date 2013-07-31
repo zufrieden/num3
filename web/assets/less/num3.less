@@ -1,10 +1,34 @@
 .columned-text{
-    column-count: 2;
-    column-gap: 2.5em;
-    -webkit-column-count: 2;
-    -webkit-column-gap: 2.5em;
+    @media (min-width: 768px){
+        column-count: 2;
+        column-gap: 2.5em;
+        -webkit-column-count: 2;
+        -webkit-column-gap: 2.5em;
+    }
+}
+.isolated{
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
+
+// types
+h1, h2, h3, h4{ font-style: italic;}
+
+
+// responsive adjustment
+@media (max-width: 767px){
+    body {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .container{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+}
+
+// nav
 .nav-num3{
     text-transform: uppercase;
     list-style: none;
@@ -25,49 +49,124 @@
     }
 }
 
-section.plan{
-    background: url(../img/plan.jpg) 50% 50% no-repeat;
+.bg-fix{
     background-size: cover;
-    min-height: 800px;
+    /*min-height: 500px;*/
     position: relative;
     background-attachment: fixed;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+// specific
+section.lausanne{
+    background-image: url(../img/lausanne.jpg);
+    @media (min-width: 767px){
+        min-height: 300px;
+    }
+}
+section.plan{
+    background-image: url(../img/plan.jpg);
+    @media (min-width: 767px){
+        min-height: 800px;
+    }
     header{
-        position: absolute;
-        z-index: 8;
-        left: 50%;
-        top: 50%;
-        width: 400px;
-        height: 200px;
-        margin: -100px 0 0 -200px;
         text-align: center;
     }
-    .square, .square-shadow{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        z-index: 6;
-        width: 400px;
-        height: 400px;
-        margin: -200px 0 0 -200px;
-        background-color: @white;
-        .box-shadow(2px 2px 3px rgba(0,0,0,.1));
-        .rotate(45deg);
+    @media (min-width: 767px){
+        header{
+            position: absolute;
+            z-index: 8;
+            left: 50%;
+            top: 50%;
+            width: 400px;
+            height: 200px;
+            margin: -100px 0 0 -200px;
+        }
+        .square, .square-shadow{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            z-index: 6;
+            width: 400px;
+            height: 400px;
+            margin: -200px 0 0 -200px;
+            background-color: @white;
+            .box-shadow(2px 2px 3px rgba(0,0,0,.1));
+            .rotate(45deg);
+        }
+        .square-shadow{
+            z-index: 4;
+            width: 420px;
+            height: 420px;
+            margin-top: -185px;
+            margin-left: -210px;
+            background-color: @num3Color;
+        }
     }
-    .square-shadow{
-        z-index: 4;
-        width: 420px;
-        height: 420px;
-        margin-top: -185px;
-        margin-left: -210px;
-        background-color: @num3Color;
+    @media (max-width: 767px){
+        header{
+            padding: 20px;
+            margin: 20px;
+            background-color: rgba(255,255,255,0.7);
+        }
+    }
+    
+}
+
+// with losange title
+.with-title{
+    @media (max-width: 767px){
+        margin-top: 100px;
+    }
+    .title{
+        text-align: center;
+        background-color: @black;
+        .rotate(45deg);
+        padding: 0;
+        width: 120px;
+        margin: -70px auto 40px;
+        height: 120px;
+        h1{
+            display: block;
+            padding: 1em 0;
+            text-align: center;
+            color: @white;
+            .rotate(-45deg);
+        }
     }
 }
 
-.highlight{
+
+// highlight text
+.simple-highlight{
     background-color: @num3Color;
-    padding: 2em 0;
+    hr{
+        border-color: @black;
+        border-top: none;
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+}
+.highlight{
+    margin-top: 2em;
+    background-color: @num3Color;
+    padding: 2em 0 4em;
     font-family: @serifFontFamily;
-    font-size: 1.6em;
+    font-size: 1.5em;
     line-height: 1.4em;
     font-style: italic;
+    @media (max-width: 767px){
+        font-size: 1.2em;
+    }
+}
+
+// checklist
+.checklist{
+    li{
+        font-size: 1.3em;
+        margin: 1em 2em;
+        line-height: 1.4em;
+        
+    }
 }

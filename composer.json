@@ -1,5 +1,6 @@
 {
     "require": {
-        "twbs/bootstrap": "dev-master"
+        "twbs/bootstrap": "dev-master",
+        "fortawesome/font-awesome": "dev-master"
     }
 }
