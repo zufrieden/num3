@@ -7325,11 +7325,21 @@ a.badge:focus {
     column-gap: 2.5em;
     -webkit-column-count: 2;
     -webkit-column-gap: 2.5em;
+    -moz-column-count: 2;
+    -moz-column-gap: 2.5em;
   }
 }
 .isolated {
   margin-top: 20px;
   margin-bottom: 20px;
+}
+.bordered-image {
+  border: 4px solid #f9dd1f;
+}
+@media (min-width: 767px) {
+  .desktop-right-image {
+    float: right;
+  }
 }
 h1,
 h2,
@@ -7431,6 +7441,40 @@ section.plan header {
     margin-left: -210px;
     background-color: #f9dd1f;
   }
+  section.plan .fixed-navigation-in {
+    opacity: 0;
+    -webkit-transition: opacity 0.15s linear;
+    -moz-transition: opacity 0.15s linear;
+    -o-transition: opacity 0.15s linear;
+    transition: opacity 0.15s linear;
+  }
+  section.plan .fixed-navigation {
+    opacity: 1;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 64px;
+    margin: 0;
+    left: 0;
+    background-color: #fcfcfc;
+    -webkit-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  }
+  section.plan .fixed-navigation .logo {
+    float: left;
+    padding: 0 20px;
+  }
+  section.plan .fixed-navigation .logo img {
+    height: 30px;
+  }
+  section.plan .fixed-navigation p {
+    display: none;
+  }
+  section.plan .fixed-navigation ul {
+    margin: 22px;
+    float: right;
+  }
 }
 @media (max-width: 767px) {
   section.plan header {
@@ -7439,34 +7483,96 @@ section.plan header {
     background-color: rgba(255, 255, 255, 0.7);
   }
 }
-@media (max-width: 767px) {
-  .with-title {
-    margin-top: 100px;
+section.contact .vcard h2 {
+  font-weight: bold;
+}
+section.contact .vcard h2,
+section.contact .vcard h4 {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  margin: 0;
+}
+@media (min-width: 767px) {
+  section.map {
+    position: relative;
+  }
+  section.map .map_info_box {
+    position: absolute;
+    z-index: 9999;
+    top: 100px;
+    left: 140px;
+    background-color: #fcfcfc;
+    padding: 1em;
+  }
+}
+@media (min-width: 767px) {
+  .rotade-box {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 190px;
+    height: 190px;
+  }
+  .rotade-box .rotade-box-content {
+    display: table;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    width: 100%;
+    height: 100%;
+  }
+  .rotade-box .rotade-box-content .rotade-box-centered-content {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
   }
 }
 .with-title .title {
   text-align: center;
   background-color: #333333;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  padding: 0;
-  width: 120px;
-  margin: -70px auto 40px;
-  height: 120px;
 }
 .with-title .title h1 {
-  display: block;
+  margin: 0;
   padding: 1em 0;
   text-align: center;
   color: #fcfcfc;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+}
+@media (min-width: 767px) {
+  .with-title .title {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    padding: 0;
+    width: 120px;
+    margin: -70px auto 40px;
+    height: 120px;
+  }
+  .with-title .title h1 {
+    margin: 10px 0;
+    display: block;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+  .with-title.with-bigger-title .title {
+    width: 160px;
+    margin: -90px auto 40px;
+    height: 160px;
+  }
+  .with-title.with-bigger-title .title h1 {
+    padding: 1.5em 0;
+  }
+}
+.logo strong {
+  display: none;
 }
 .simple-highlight {
   background-color: #f9dd1f;
@@ -7478,7 +7584,6 @@ section.plan header {
   margin-right: 30%;
 }
 .highlight {
-  margin-top: 2em;
   background-color: #f9dd1f;
   padding: 2em 0 4em;
   font-family: Georgia, "Times New Roman", Times, serif;
