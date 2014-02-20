@@ -17,7 +17,6 @@
         "symfony/monolog-bridge": "~2.2",
         "symfony/process": "~2.2",
         "symfony/security": "~2.2",
-        "symfony/translation": "~2.2",
         "symfony/twig-bridge": "~2.2",
         "symfony/validator": "~2.2",
         "twitter/bootstrap": "v2.3.2"
