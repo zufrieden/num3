@@ -1,0 +1,116 @@
+{% extends "layout.html.twig" %}
+
+{% block language %}fr{% endblock %}
+{% block active_fr 'active' %}
+
+{% block title 'Num3.ch – CoWorking Space Lausanne' %}
+{% block meta_description '' %}
+{% block meta_keyword '' %}
+
+{% block intro %}
+Numéro 3 est un nouvel espace de travail partagé dans le quartier vivant et multiculturel de l’Avenue de France-Collonges-Maupas à Lausanne, plus précisément à la <a href="#plans">rue Ecole-de-Commerce n°3</a>.
+{% endblock %}
+
+{% block offre_menu 'Offres' %}
+{% block tarif_menu 'Tarifs' %}
+{% block contact_menu 'Contact' %}
+
+
+{% block highlight_text %}
+<p>
+    C’est un lieu où Travail peut rimer avec Plaisir. Spécialement pensé pour les nomades qui aiment s’inspirer de la Nature, cet espace se veut aussi un lieu de rencontre convivial et de détente.
+</p>
+<p>
+    Au numéro 3 de la rue Ecole-de-Commerce, les grands esprits se rencontrent !
+    Que vous soyez architecte, graphiste, mathématicien ou comptable, étudiant ou senior, tous les goûts sont permis.
+</p>
+<p>
+    Une place particulière sera faite aux associations, ONG et entrepreneurs de l’économie sociale. Nous espérons que ce lieu puisse servir d’incubateur à des projets de recherche dans le domaine du développement durable et nous efforcerons de favoriser les échanges sur ces thèmes.
+</p>
+{% endblock %}
+
+
+{% block offre_title %}Offre{% endblock %}
+{% block offre_intro %}Nous mettons à votre disposition{% endblock %}
+{% block offre_checklist %}
+<ul class="checklist icons-ul">
+  <li><i class="fa fa-check-square-o"></i> Des bureaux modulables dans un espace ouvert et lumineux de 42 m2</li>
+  <li><i class="fa fa-check-square-o"></i> Des bureaux fermés aménagés vous garantissant discrétion et confidentialité</li>
+  <li><i class="fa fa-check-square-o"></i> Une salle de conférence pouvant accueillir jusqu’à 10 personnes</li>
+  <li><i class="fa fa-check-square-o"></i> Une imprimante multifonctions</li>
+  <li><i class="fa fa-check-square-o"></i> Accès wifi </li>
+  <li><i class="fa fa-check-square-o"></i> Des casiers sous clé</li>
+  <li><i class="fa fa-check-square-o"></i> Un espace de stockage de données sécurisé </li>
+</ul>
+{% endblock %}
+
+{% block offre_checklist_suite %}
+<h3>Mais aussi …</h3>
+<ul class="checklist icons-ul">
+  <li><i class="fa fa-gamepad"></i> Un espace de repos avec bibliothèque, consoles de jeux, etc.</li>
+  <li><i class="fa fa-coffee"></i> Des boissons à volonté (dans la limite du stock disponible)</li>
+</ul>
+{% endblock %}
+
+{% block tarifs_titre %}Tarifs{% endblock %}
+
+{% block tarifs_prix %}
+<h1>CHF 500.-</h1>
+<p>au mois</p>
+<hr>
+<h1>CHF 100.-</h1>
+<p>à la journée</p>
+<hr>
+<h1>CHF 25.-</h1>
+<p>à l'heure</p>
+<hr>
+<p>
+  <a href="https://docs.google.com/forms/d/1biwQ2F4Ioax4FkgCQNP91VsAWCnA5I4KPb8mW7uq6E0/viewform" class="btn btn-primary btn-large">S'inscrire</a>
+</p>
+{% endblock %}
+
+{% block tarifs_suite %}
+<h3>Services à la carte</h3>
+<ul class="checklist icons-ul">
+  <li><i class="fa fa-check-square-o"></i>Courriers/colis</li>
+  <li><i class="fa fa-check-square-o"></i>Assistance administrative</li>
+  <li><i class="fa fa-check-square-o"></i>Organisation comptable</li>
+  <li><i class="fa fa-check-square-o"></i>Solutions informatiques</li>
+  <li><i class="fa fa-check-square-o"></i>Conseils bonnes adresses</li>
+</ul>
+<p>Pour plus d’information sur nos services à la carte, contactez-nous !</p>
+
+<ul class="checklist icons-ul">
+   <li><i class="fa fa-check-square-o"></i>Taxe d’inscription : CHF 50.-</li>
+   <li><i class="fa fa-check-square-o"></i>Rabais Associations et étudiants: 10%</li>
+</ul>
+{% endblock %}
+
+
+{% block adresse_titre %}Adresse{% endblock %}
+{% block adresse_contenu %}
+<p>
+    Rue Ecole-de-Commerce 3<br/>
+    1004 Lausanne
+</p>
+<div id="show_map">
+    <a href="#" id="show_map_bt" class="btn secondary">Afficher le plan</a>
+    <a href="#" id="show_photo_bt" class="btn secondary" style="display:none;">Afficher la vue aérienne</a>
+</div>
+{% endblock %}
+
+
+{% block contact_titre %}Contact{% endblock %}
+{% block contact_contenu %}
+<h2>
+    Nathalie Caracas
+</h2>
+<h4>
+
+</h4>
+<hr>
+<p>
+    <a href="mailto:info@num3.ch" class="btn btn-primary btn-medium">info@num3.ch</a>
+    <a href="tel:0041787883535" class="btn btn-primary btn-medium">+41 78 788 35 35</a>
+</p>
+{% endblock %}

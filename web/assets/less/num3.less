@@ -39,10 +39,15 @@ h1, h2, h3, h4{ font-style: italic;}
 }
 
 // nav
+.nav-language{
+    position: fixed;
+    z-index: 10001;
+    right: 10px;
+    top: 14px;
+}
 .nav-num3{
     text-transform: uppercase;
     list-style: none;
-    text-align: center;
     margin: 2em 0 0 0;
     padding: 0;
     li{
@@ -66,6 +71,16 @@ h1, h2, h3, h4{ font-style: italic;}
     background-attachment: fixed;
     background-position: 50% 50%;
     background-repeat: no-repeat;
+}
+.social-options{
+    @media (min-width: 767px){
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        .btn{
+            margin-bottom: 10px;
+        }
+    }
 }
 
 // specific
@@ -122,6 +137,7 @@ section.plan{
         .fixed-navigation{
             opacity: 1;
             position: fixed;
+            z-index: 10000;
             top: 0;
             width: 100%;
             height: 64px;
@@ -139,9 +155,15 @@ section.plan{
             p{
                 display: none;
             }
-            ul{
+            .nav-num3{
                 margin: 22px;
+                float: left;
+            }
+            .social-options{
                 float: right;
+                width: auto;
+                margin-right: 120px;
+                margin-top: 17px;
             }
         }
 
@@ -150,10 +172,10 @@ section.plan{
         header{
             padding: 20px;
             margin: 20px;
-            background-color: rgba(255,255,255,0.7);
+            background-color: rgba(255,255,255,0.85);
         }
     }
-    
+
 }
 
 section.contact{
@@ -241,7 +263,7 @@ section.contact{
             }
         }
     }
-    
+
 }
 
 .logo{
@@ -273,11 +295,16 @@ section.contact{
 }
 
 // checklist
+.icons-ul{
+    list-style: none;
+    .fa{
+        margin-right: 0.8em;
+    }
+}
 .checklist{
     li{
         font-size: 1.3em;
-        margin: 1em 2em;
+        margin: 1em 2em 1em 0;
         line-height: 1.4em;
-        
     }
 }
