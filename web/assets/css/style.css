@@ -5879,10 +5879,15 @@ h4 {
   }
 }
 .nav-language {
-  position: fixed;
+  position: absolute;
   z-index: 10001;
   right: 10px;
   top: 14px;
+}
+@media (min-width: 767px) {
+  .nav-language {
+    position: fixed;
+  }
 }
 .nav-num3 {
   text-transform: uppercase;
@@ -5919,6 +5924,22 @@ h4 {
   }
   .social-options .btn {
     margin-bottom: 10px;
+  }
+}
+section.detente {
+  background-image: url(../img/detente.jpg);
+}
+@media (min-width: 767px) {
+  section.detente {
+    min-height: 400px;
+  }
+}
+section.view {
+  background-image: url(../img/view2.jpg);
+}
+@media (min-width: 767px) {
+  section.view {
+    min-height: 400px;
   }
 }
 section.lausanne {

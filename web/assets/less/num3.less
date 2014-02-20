@@ -40,7 +40,10 @@ h1, h2, h3, h4{ font-style: italic;}
 
 // nav
 .nav-language{
-    position: fixed;
+    position: absolute;
+    @media (min-width: 767px){
+        position: fixed;
+    }
     z-index: 10001;
     right: 10px;
     top: 14px;
@@ -84,6 +87,18 @@ h1, h2, h3, h4{ font-style: italic;}
 }
 
 // specific
+section.detente{
+    background-image: url(../img/detente.jpg);
+    @media (min-width: 767px){
+        min-height: 400px;
+    }
+}
+section.view{
+    background-image: url(../img/view2.jpg);
+    @media (min-width: 767px){
+        min-height: 400px;
+    }
+}
 section.lausanne{
     background-image: url(../img/lausanne.jpg);
     @media (min-width: 767px){
