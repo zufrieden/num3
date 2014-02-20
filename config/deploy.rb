@@ -35,7 +35,7 @@ namespace :myproject do
 
     task :vendors do
         run "curl -s http://getcomposer.org/installer | php -- --install-dir=#{release_path}"
-        run "cd #{release_path} && #{release_path}/composer.phar install"
+        # run "cd #{release_path} && #{release_path}/composer.phar install"
     end
 
     # task :move_fonts do
