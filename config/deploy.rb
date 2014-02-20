@@ -38,9 +38,9 @@ namespace :myproject do
         run "cd #{release_path} && #{release_path}/composer.phar install"
     end
 
-    task :move_fonts do
-        run "cp -r #{current_path}/vendor/fortawesome/font-awesome/font #{current_path}/web/assets/font"
-    end
+    # task :move_fonts do
+    #     run "cp -r #{current_path}/vendor/fortawesome/font-awesome/font #{current_path}/web/assets/font"
+    # end
 
     # task :shared_symlinks do
     #     run "ln -s #{shared_path}/resources/config/prod.php #{current_path}/resources/config/prod.php"
@@ -52,7 +52,7 @@ end
 set  :keep_releases,  3
 
 after "deploy:update_code", "myproject:vendors"
-after "deploy:create_symlink", "myproject:move_fonts"
+# after "deploy:create_symlink", "myproject:move_fonts"
 
 # Be more verbose by uncommenting the following line
 # logger.level = Logger::MAX_LEVEL
