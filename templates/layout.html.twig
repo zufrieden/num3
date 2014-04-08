@@ -46,9 +46,22 @@
   <div id="content">
     <section class="highlight">
       <div class="container">
-        <div class="columned-text">
-          {% block highlight_text %}
-          {% endblock %}
+        <div class="row">
+          <div class="span6">
+            {% block highlight_text %}
+            {% endblock %}
+          </div>
+          <div class="span6">
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+              var js, fjs = d.getElementsByTagName(s)[0];
+              if (d.getElementById(id)) return;
+              js = d.createElement(s); js.id = id;
+              js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=339731606059889";
+              fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));</script>
+            <div class="fb-like-box" style="background-color:#fff;" data-href="https://www.facebook.com/pages/Num3/633533630046752" data-width="500" data-colorscheme="light" data-show-faces="true" data-header="false" data-stream="true" data-show-border="false"></div>
+          </div>
         </div>
       </div>
     </section>
@@ -91,50 +104,50 @@
           </div>
           <div class="span6">
             {% block tarifs_suite %}{% endblock %}
-         </div>
-       </div>
+          </div>
+        </div>
 
-     </div>
-   </section>
+      </div>
+    </section>
 
 
 
-   <section id="plans" class="map">
-    <div class="map_info_box rotade-box">
-      <div class="rotade-box-content">
-        <div class="rotade-box-centered-content text-center isolated">
-          <h4>{% block adresse_titre %}{% endblock %}</h4>
+    <section id="plans" class="map">
+      <div class="map_info_box rotade-box">
+        <div class="rotade-box-content">
+          <div class="rotade-box-centered-content text-center isolated">
+            <h4>{% block adresse_titre %}{% endblock %}</h4>
 
             {% block adresse_contenu %}{% endblock %}
+          </div>
         </div>
       </div>
-    </div>
-    <div id="map_canvas" style="width:100%; height:500px;"></div>
-  </section>
-  <!-- -->
-  <section class="with-title with-bigger-title contact" id="contact">
-    <div class="title"><h1>{% block contact_titre %}{% endblock %}</h1></div>
-    <div class="container isolated">
-      <div class="row-fluid isolated vcard">
-        <div class="span3 offset3">
-          <img src="/assets/img/nath.jpg" alt="" class="bordered-image desktop-right-image" width="60%">
-        </div>
-        <div class="span4">
-          {% block contact_contenu %}{% endblock %}
+      <div id="map_canvas" style="width:100%; height:500px;"></div>
+    </section>
+    <!-- -->
+    <section class="with-title with-bigger-title contact" id="contact">
+      <div class="title"><h1>{% block contact_titre %}{% endblock %}</h1></div>
+      <div class="container isolated">
+        <div class="row-fluid isolated vcard">
+          <div class="span3 offset3">
+            <img src="/assets/img/nath.jpg" alt="" class="bordered-image desktop-right-image" width="60%">
+          </div>
+          <div class="span4">
+            {% block contact_contenu %}{% endblock %}
+          </div>
         </div>
       </div>
-    </div>
 
 
 
-  </section>
-</div>
-<script src="/assets/bower_components/jquery/jquery.min.js"></script>
-<script src="/assets/bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
-<script src="/assets/bower_components/jquery.localScroll/jquery.localScroll.js"></script>
+    </section>
+  </div>
+  <script src="/assets/bower_components/jquery/jquery.min.js"></script>
+  <script src="/assets/bower_components/jquery.scrollTo/jquery.scrollTo.min.js"></script>
+  <script src="/assets/bower_components/jquery.localScroll/jquery.localScroll.js"></script>
 
-<script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
-<script src="/assets/js/app.js"></script>
+  <script src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+  <script src="/assets/js/app.js"></script>
 
 
 
